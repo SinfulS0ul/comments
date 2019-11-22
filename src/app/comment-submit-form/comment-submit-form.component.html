@@ -1,0 +1,20 @@
+<form 
+  [formGroup]='sendReplyForm' 
+  (ngSubmit)='onSubmit()'
+>
+  <div class='form-group'>
+    <textarea 
+      type='text' 
+      formControlName='reply' 
+      class='form-control'
+      placeholder='Your reply'
+    >
+    </textarea>
+    <div class='error' *ngIf="isControlInvalid('reply')">
+        Nothing to submit
+    </div>
+  </div>
+  <div type='submit'>
+      <button>Submit</button>
+  </div>
+</form>

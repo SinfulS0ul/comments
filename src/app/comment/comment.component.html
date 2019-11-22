@@ -1,0 +1,27 @@
+<div [ngClass]="'comment'">
+  <div [ngClass]="'comment__info'">
+    <span>
+      {{commentData.userName}}
+    </span>
+    <span [ngClass]="'post-date-text'">
+      {{postDate}}
+    </span>
+    <span 
+      [ngClass]="'close-button'"
+      (click)='deleteComment()'
+    >
+      X
+    </span>
+    <p>
+      {{commentData.text}}
+    </p>
+    <button (click)='changeInput()'>
+      Reply
+    </button>
+  </div>
+  <app-comment-submit-form 
+    *ngIf='showInputService.showInput===commentData'
+    [commentData]='commentData'
+  >
+  </app-comment-submit-form>
+</div>

@@ -1,0 +1,32 @@
+textarea{
+  height: 70px;
+  width: 97%;
+  border-radius: 5px;
+  border: 1px solid rgb(196, 189, 189);
+  outline: none;
+  margin-top: 10px;
+  resize: none;
+  font-size: 18px;
+  padding: 1.5%;
+}
+
+.error{
+  font-size: 18px;
+  color: red;
+}
+
+button{
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 90px;
+  background: rgb(43, 56, 138);
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  &:hover{
+    background: rgb(26, 38, 111);
+  }
+}

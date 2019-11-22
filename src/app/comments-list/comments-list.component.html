@@ -1,0 +1,9 @@
+<app-find-comments-input></app-find-comments-input>
+<ng-container *ngIf='commentsService.keyWord; else thread'>
+  <ng-container *ngFor='let comment of commentsService.foundComments; trackBy: trackByFn'>
+    <app-comment [commentData]='comment'></app-comment>
+  </ng-container>
+</ng-container>
+<ng-template #thread>
+  <app-comment-thread [commentData]='commentsService.comments'></app-comment-thread>
+</ng-template>

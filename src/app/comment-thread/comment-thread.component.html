@@ -1,0 +1,7 @@
+<div [ngClass]="'thread'">
+  <ng-container *ngFor='let comment of commentData; trackBy: trackByFn'>
+    <app-comment [commentData]='comment'></app-comment>
+    <app-comment-thread *ngIf='comment.comments.length>0' [commentData]='comment.comments'>
+    </app-comment-thread>
+  </ng-container>
+</div>
